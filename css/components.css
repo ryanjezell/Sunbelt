@@ -1,0 +1,613 @@
+/* ==========================================================================
+   COMPONENTS
+   Reusable UI pieces used across two or more pages.
+   ========================================================================== */
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background-color: var(--color-brass);
+  color: var(--color-ink);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-brass-dark);
+  color: var(--color-text-on-dark);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-text-on-dark);
+}
+
+.btn--on-dark {
+  background-color: transparent;
+  color: var(--color-text-on-dark);
+  border-color: rgba(245, 246, 244, 0.4);
+}
+
+.btn--on-dark:hover {
+  background-color: rgba(245, 246, 244, 0.1);
+  border-color: var(--color-text-on-dark);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--sm {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.8rem;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---- Triad mark (signature graphic) ---- */
+.triad-mark {
+  color: var(--color-brass);
+}
+
+.triad-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-block: var(--space-2);
+  color: var(--color-brass);
+}
+
+.triad-divider::before,
+.triad-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--color-line);
+  max-width: 120px;
+}
+
+/* ---- Stat chip (ledger-entry style) ---- */
+.stat {
+  border-top: 2px solid var(--color-brass);
+  padding-top: var(--space-2);
+}
+
+.stat__value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-stat);
+  font-weight: 600;
+  color: var(--color-ink);
+  display: block;
+  line-height: 1.1;
+}
+
+.section--ink .stat__value {
+  color: var(--color-brass);
+}
+
+.stat__label {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+  display: block;
+}
+
+.section--ink .stat__label {
+  color: var(--color-text-on-dark-secondary);
+}
+
+/* ---- Value-prop / trust cards ---- */
+.value-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  height: 100%;
+}
+
+.value-card__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-brass-dark);
+  margin-bottom: var(--space-2);
+}
+
+.value-card h3 {
+  margin-bottom: var(--space-1);
+}
+
+.value-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-small);
+}
+
+/* ---- Specialty cards (Trades / Auto / Retail) ---- */
+.specialty-card {
+  position: relative;
+  background: var(--color-ink);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  height: 100%;
+  overflow: hidden;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.specialty-card:hover {
+  transform: translateY(-4px);
+}
+
+.specialty-card::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(184, 134, 63, 0.18);
+}
+
+.specialty-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+  position: relative;
+  z-index: 1;
+}
+
+.specialty-card h3 {
+  color: var(--color-text-on-dark);
+  margin-block: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.specialty-card p {
+  color: var(--color-text-on-dark-secondary);
+  font-size: var(--fs-small);
+  position: relative;
+  z-index: 1;
+}
+
+.specialty-note {
+  margin-top: var(--space-3);
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Bio card ---- */
+.bio-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  height: 100%;
+}
+
+.bio-card__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+  border: 2px solid var(--color-brass-tint);
+}
+
+.bio-card--full .bio-card__photo {
+  width: 140px;
+  height: 140px;
+}
+
+.bio-card__name {
+  margin-bottom: 0.15rem;
+}
+
+.bio-card__title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-brass-dark);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.bio-card__bio p + p {
+  margin-top: var(--space-2);
+}
+
+.bio-card__contact {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--fs-small);
+}
+
+.bio-card__contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+}
+
+.bio-card__contact svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-brass-dark);
+}
+
+.bio-card__credentials {
+  margin-top: var(--space-2);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+/* ---- Whitepaper / resource card ---- */
+.resource-card {
+  display: flex;
+  gap: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  height: 100%;
+}
+
+.resource-card__thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 96px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-brass-tint);
+}
+
+.resource-card__body h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-1);
+}
+
+.resource-card__body p {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-brass-dark);
+  background: var(--color-brass-tint);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: var(--space-2);
+}
+
+/* ---- Article summary card ---- */
+.article-card {
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.article-card:last-child {
+  border-bottom: none;
+}
+
+.article-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-1);
+}
+
+.article-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-1);
+}
+
+.article-card__link {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  color: var(--color-brass-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.article-card__link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.article-card__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ---- CTA band ---- */
+.cta-band {
+  background: linear-gradient(135deg, var(--color-ink) 0%, var(--color-ink-700) 100%);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.cta-band h2 {
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-1);
+}
+
+.cta-band p {
+  color: var(--color-text-on-dark-secondary);
+}
+
+/* ---- Forms ---- */
+.form-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+@media (max-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  margin-bottom: var(--space-3);
+}
+
+.field label {
+  display: block;
+  font-size: var(--fs-small);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+  color: var(--color-ink);
+}
+
+.field .required {
+  color: var(--color-brass-dark);
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-paper);
+  font-size: var(--fs-body);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--color-brass);
+  box-shadow: 0 0 0 3px var(--color-brass-tint);
+  outline: none;
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.field-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+.field-error {
+  font-size: 0.78rem;
+  color: var(--color-error);
+  margin-top: var(--space-1);
+  display: none;
+}
+
+.field.has-error input,
+.field.has-error textarea,
+.field.has-error select {
+  border-color: var(--color-error);
+}
+
+.field.has-error .field-error {
+  display: block;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+}
+
+.checkbox-field input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Honeypot field - hidden from sighted and screen-reader users, present for bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  display: none;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-3);
+  font-size: var(--fs-small);
+}
+
+.form-status.is-visible {
+  display: flex;
+}
+
+.form-status--success {
+  background: var(--color-success-tint);
+  color: var(--color-success);
+}
+
+.form-status--error {
+  background: var(--color-error-tint);
+  color: var(--color-error);
+}
+
+.form-status svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ---- Info panel (contact page) ---- */
+.info-panel {
+  background: var(--color-ink);
+  color: var(--color-text-on-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.info-panel h3 {
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-3);
+}
+
+.info-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+}
+
+.info-row svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-brass);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-row a,
+.info-row p {
+  color: var(--color-text-on-dark-secondary);
+  font-size: var(--fs-small);
+}
+
+.info-row a:hover {
+  color: var(--color-text-on-dark);
+}
+
+/* ---- Modal (whitepaper email gate) ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 42, 56, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  z-index: 200;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: var(--space-1);
+}
+
+.modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---- Breadcrumb-free page intro ---- */
+.page-intro {
+  max-width: 700px;
+}
+
+.page-intro .eyebrow {
+  margin-bottom: var(--space-2);
+}
