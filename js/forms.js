@@ -108,7 +108,7 @@
     }
 
     // Only intercept with fetch if the action points to a real endpoint.
-    var action = form.getAttribute("action") || "";
+    var action = form.getAttribute("https://formspree.io/f/meeyodpe") || "";
     if (action.indexOf("YOUR_FORM_ID") !== -1) {
       // Placeholder Formspree ID hasn't been configured yet -
       // let the normal HTML submission happen (it will simply fail
