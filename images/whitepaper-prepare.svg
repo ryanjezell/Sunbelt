@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="96" viewBox="0 0 72 96" role="img" aria-labelledby="title desc">
+  <title id="title">Business sale preparation guide</title>
+  <desc id="desc">A navy document with a brass checklist and download arrow.</desc>
+  <rect width="72" height="96" rx="6" fill="#f3e9d8"/>
+  <path d="M18 13h27l10 10v53a7 7 0 0 1-7 7H18a7 7 0 0 1-7-7V20a7 7 0 0 1 7-7Z" fill="#ffffff" stroke="#1b2a38" stroke-width="2"/>
+  <path d="M45 13v10h10" fill="none" stroke="#1b2a38" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="20" y="31" width="8" height="8" rx="2" fill="#b8863f"/>
+  <path d="m22 35 2 2 4-5" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 35h13" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <rect x="20" y="45" width="8" height="8" rx="2" fill="#b8863f"/>
+  <path d="m22 49 2 2 4-5" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 49h13" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <rect x="20" y="59" width="8" height="8" rx="2" fill="#b8863f"/>
+  <path d="m22 63 2 2 4-5" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 63h13" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="52" cy="76" r="11" fill="#1b2a38"/>
+  <path d="M52 70v9m0 0-4-4m4 4 4-4" fill="none" stroke="#f5f6f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

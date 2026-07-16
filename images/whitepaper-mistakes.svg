@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="96" viewBox="0 0 72 96" role="img" aria-labelledby="title desc">
+  <title id="title">Selling mistakes guide</title>
+  <desc id="desc">A navy document with a brass warning symbol, five-item list, and download arrow.</desc>
+  <rect width="72" height="96" rx="6" fill="#f3e9d8"/>
+  <path d="M18 13h27l10 10v53a7 7 0 0 1-7 7H18a7 7 0 0 1-7-7V20a7 7 0 0 1 7-7Z" fill="#ffffff" stroke="#1b2a38" stroke-width="2"/>
+  <path d="M45 13v10h10" fill="none" stroke="#1b2a38" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M27 31 34 43H20l7-12Z" fill="#b8863f"/>
+  <path d="M27 35v4" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="27" cy="41" r="1.2" fill="#ffffff"/>
+  <path d="M39 34h9M39 40h7" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="22" cy="52" r="2" fill="#b8863f"/>
+  <path d="M28 52h20" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="22" cy="59" r="2" fill="#b8863f"/>
+  <path d="M28 59h17" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="22" cy="66" r="2" fill="#b8863f"/>
+  <path d="M28 66h19" stroke="#55636e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="52" cy="76" r="11" fill="#1b2a38"/>
+  <path d="M52 70v9m0 0-4-4m4 4 4-4" fill="none" stroke="#f5f6f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
